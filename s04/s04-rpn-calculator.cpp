@@ -39,10 +39,10 @@ auto evaluate_subtraction(std::stack<double>& stack) -> void
     stack.push(a - b);
 }
 
-auto evaluate_multiplication(std::stack<double>& stack) -> void
+auto evaluate_multiplying(std::stack<double>& stack) -> void
 {
     if (stack.size() < 2) {
-        throw std::logic_error{"not enough operands for -"};
+        throw std::logic_error{"not enough operands for *"};
     }
     auto const b = pop_top(stack);
     auto const a = pop_top(stack);
@@ -52,7 +52,7 @@ auto evaluate_multiplication(std::stack<double>& stack) -> void
 auto evaluate_division(std::stack<double>& stack) -> void
 {
     if (stack.size() < 2) {
-        throw std::logic_error{"not enough operands for -"};
+        throw std::logic_error{"not enough operands for /"};
     }
     auto const b = pop_top(stack);
     auto const a = pop_top(stack);
@@ -61,13 +61,48 @@ auto evaluate_division(std::stack<double>& stack) -> void
 auto evaluate_division_of_integers(std::stack<double>& stack) -> void
 {
     if (stack.size() < 2) {
-        throw std::logic_error{"not enough operands for -"};
+        throw std::logic_error{"not enough operands for //"};
     }
     auto const b = pop_top(stack);
     auto const a = pop_top(stack);
     stack.push(floor(a / b));
 }
-
+auto evaluate_modulo(std::stack<double>& stack) -> void
+{
+    if (stack.size() < 2) {
+        throw std::logic_error{"not enough operands for %"};
+    }
+    auto const b = pop_top(stack);
+    auto const a = pop_top(stack);
+    stack.push((int)a % (int)b);
+}
+auto evaluate_power(std::stack<double>& stack) -> void
+{
+    if (stack.size() < 2) {
+        throw std::logic_error{"not enough operands for **"};
+    }
+    auto const b = pop_top(stack);
+    auto const a = pop_top(stack);
+    stack.push(std::pow(a,b));
+}
+auto evaluate_sqrt(std::stack<double>& stack) -> void
+{
+    if (stack.size() < 1) {
+        throw std::logic_error{"not enough operands for sqrt"};
+    }
+    auto const b = pop_top(stack);
+    auto const a = pop_top(stack);
+    stack.push(std::sqrt(a));
+}
+auto evaluate_log(std::stack<double>& stack) -> void
+{
+    if (stack.size() < 1) {
+        throw std::logic_error{"not enough operands for log10"};
+    }
+    auto const b = pop_top(stack);
+    auto const a = pop_top(stack);
+    stack.push(std::log10(a));
+}
 auto make_args(int argc, char* argv[]) -> std::vector<std::string>
 {
     auto args = std::vector<std::string>{};
@@ -89,11 +124,19 @@ auto main(int argc, char* argv[]) -> int
             } else if (each == "-") {
                 evaluate_subtraction(stack);    
             } else if (each == "*") {
-                evaluate_multiplication(stack);
+                evaluate_multiplying(stack);
             } else if (each == "/") {
                 evaluate_division(stack);
             } else if (each == "//") {
 				evaluate_division_of_integers(stack);
+			} else if (each == "%") {
+				evaluate_modulo(stack);
+			} else if (each == "**") {
+				evaluate_power(stack);
+			} else if (each == "sqrt") {
+				evaluate_sqrt(stack);
+			} else if (each == "log10") {
+				evaluate_log(stack);
             } else {
                 stack.push(std::stod(each));
             }

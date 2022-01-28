@@ -1,0 +1,24 @@
+﻿Dungeon.obj : error LNK2005: "public: __thiscall Dungeon::Dungeon(class Player)" (??0Dungeon@@QAE@VPlayer@@@Z) already defined in main.obj
+Dungeon.obj : error LNK2005: "public: void __thiscall Dungeon::EnterRoom(class Room *)" (?EnterRoom@Dungeon@@QAEXPAVRoom@@@Z) already defined in main.obj
+Dungeon.obj : error LNK2005: "public: void __thiscall Dungeon::HandleEmptyRoom(class Room *)" (?HandleEmptyRoom@Dungeon@@QAEXPAVRoom@@@Z) already defined in main.obj
+Dungeon.obj : error LNK2005: "public: void __thiscall Dungeon::HandleEnemyRoom(class Room *)" (?HandleEnemyRoom@Dungeon@@QAEXPAVRoom@@@Z) already defined in main.obj
+Dungeon.obj : error LNK2005: "public: void __thiscall Dungeon::HandleFightAction(class GameCharacter *)" (?HandleFightAction@Dungeon@@QAEXPAVGameCharacter@@@Z) already defined in main.obj
+Dungeon.obj : error LNK2005: "public: void __thiscall Dungeon::HandleLootAction(class Room *)" (?HandleLootAction@Dungeon@@QAEXPAVRoom@@@Z) already defined in main.obj
+Dungeon.obj : error LNK2005: "public: void __thiscall Dungeon::HandleLootRoom(class Room *)" (?HandleLootRoom@Dungeon@@QAEXPAVRoom@@@Z) already defined in main.obj
+Dungeon.obj : error LNK2005: "public: void __thiscall Dungeon::HandleMoveAction(class Room *)" (?HandleMoveAction@Dungeon@@QAEXPAVRoom@@@Z) already defined in main.obj
+Dungeon.obj : error LNK2005: "public: int __thiscall Dungeon::PerformEndGame(void)" (?PerformEndGame@Dungeon@@QAEHXZ) already defined in main.obj
+Dungeon.obj : error LNK2005: "public: void __thiscall Dungeon::PrintAction(int,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > * const)" (?PrintAction@Dungeon@@QAEXHQAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) already defined in main.obj
+Dungeon.obj : error LNK2005: "public: int __thiscall Dungeon::RunDungeon(void)" (?RunDungeon@Dungeon@@QAEHXZ) already defined in main.obj
+GameCharacter.obj : error LNK2005: "public: __thiscall GameCharacter::GameCharacter(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,int,int,int)" (??0GameCharacter@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@HHH@Z) already defined in main.obj
+GameCharacter.obj : error LNK2005: "public: bool __thiscall GameCharacter::IsCharacterDead(void)" (?IsCharacterDead@GameCharacter@@QAE_NXZ) already defined in main.obj
+GameCharacter.obj : error LNK2005: "public: int __thiscall GameCharacter::TakeDamage(int)" (?TakeDamage@GameCharacter@@QAEHH@Z) already defined in main.obj
+Item.obj : error LNK2005: "public: __thiscall Item::Item(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,int,int,int)" (??0Item@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@HHH@Z) already defined in main.obj
+Player.obj : error LNK2005: "public: __thiscall Player::Player(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,int,int,int)" (??0Player@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@HHH@Z) already defined in main.obj
+Player.obj : error LNK2005: "public: void __thiscall Player::AddItem(class Item)" (?AddItem@Player@@QAEXVItem@@@Z) already defined in main.obj
+Player.obj : error LNK2005: "public: void __thiscall Player::ChangeRoom(class Room *)" (?ChangeRoom@Player@@QAEXPAVRoom@@@Z) already defined in main.obj
+Player.obj : error LNK2005: "public: void __thiscall Player::ChangeStats(int,int,int)" (?ChangeStats@Player@@QAEXHHH@Z) already defined in main.obj
+Player.obj : error LNK2005: "public: void __thiscall Player::LootRoom(class Room *)" (?LootRoom@Player@@QAEXPAVRoom@@@Z) already defined in main.obj
+Room.obj : error LNK2005: "public: __thiscall Room::Room(int,bool,class std::vector<class Item,class std::allocator<class Item> >,class std::vector<class GameCharacter,class std::allocator<class GameCharacter> >)" (??0Room@@QAE@H_NV?$vector@VItem@@V?$allocator@VItem@@@std@@@std@@V?$vector@VGameCharacter@@V?$allocator@VGameCharacter@@@std@@@2@@Z) already defined in main.obj
+Room.obj : error LNK2005: "public: void __thiscall Room::ClearEnemies(void)" (?ClearEnemies@Room@@QAEXXZ) already defined in main.obj
+Room.obj : error LNK2005: "public: void __thiscall Room::ClearLoot(void)" (?ClearLoot@Room@@QAEXXZ) already defined in main.obj
+C:\Users\pmura\Desktop\GraRPG\Debug\GraRPG.exe : fatal error LNK1169: one or more multiply defined symbols found
